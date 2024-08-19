@@ -2,13 +2,14 @@
   "name": "vscode-open-coverage-report",
   "displayName": "Open Coverage Report",
   "description": "Simple command to directly open the Instanbul coverage web page of the current file.",
+  "repository": "https://github.com/LukeGeneva/vscode-open-coverage-report",
   "version": "1.0.0",
+  "license": "MIT",
+  "publisher": "lukegeneva",
   "engines": {
     "vscode": "^1.92.0"
   },
-  "categories": [
-    "Other"
-  ],
+  "categories": ["Other"],
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
@@ -21,7 +22,9 @@
   },
   "scripts": {
     "lint": "eslint .",
+    "package": "vsce package",
     "pretest": "npm run lint",
+    "publish": "vsce publish",
     "test": "vscode-test"
   },
   "devDependencies": {
@@ -30,6 +33,7 @@
     "@types/vscode": "^1.92.0",
     "@vscode/test-cli": "^0.0.9",
     "@vscode/test-electron": "^2.4.0",
+    "@vscode/vsce": "^3.0.0",
     "eslint": "^8.57.0",
     "prettier": "^3.3.3",
     "typescript": "^5.4.5"
